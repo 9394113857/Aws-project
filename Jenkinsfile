@@ -22,8 +22,11 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
+                echo 'Creating virtual environment...'
+                sh 'python3 -m venv ${VENV_PATH}'
+                sh 'source ${VENV_PATH}/bin/activate && pip install --upgrade pip'
                 echo 'Installing dependencies...'
-                sh 'python3 -m pip install -r requirements.txt'
+                sh 'source ${VENV_PATH}/bin/activate && pip install -r requirements.txt'
             }
         }
 
@@ -44,7 +47,7 @@ pipeline {
                         source ${VENV_PATH}/bin/activate
                         
                         # Install dependencies
-                        python3 -m pip install -r requirements.txt
+                        pip install -r requirements.txt
                         
                         # Kill any existing Gunicorn processes
                         pkill gunicorn || true
@@ -54,7 +57,6 @@ pipeline {
                         EOF
                         '''
                     }
-                    echo 'Deployment completed.'
                 }
             }
         }
