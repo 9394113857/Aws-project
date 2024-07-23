@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Flask Application</h1>
+    
+    <p>Current Time (IST): {{ current_time }}</p>
+
+    <form method="post">
+        <label for="username">Enter your name:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if username %}
+        <p>Hello, {{ username }}!</p>
+    {% endif %}
+</body>
+</html>

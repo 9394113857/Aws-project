@@ -1,0 +1,83 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg
+*.egg-info/
+dist/
+build/
+*.pyc
+
+# Flask files
+instance/
+*.pyc
+
+# Database files
+*.sqlite3
+*.db
+
+# Logs and databases
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.pid
+*.swp
+*.swo
+*.cover
+*.orig
+*.rej
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+###############################
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebook checkpoints
+###############################
+.ipynb_checkpoints
+
+# Flask specific files
+######################
+instance/
+*.sqlite3
+
+# Environment variables
+.env
+
+# Test and coverage results
+###########################
+coverage/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# macOS specific files
+######################
+.DS_Store
