@@ -7,8 +7,8 @@ pipeline {
         GIT_REPO = 'https://github.com/9394113857/Aws-project.git' // Git repository URL
         GIT_BRANCH = 'raghu' // Branch to checkout
         EC2_HOST = '54.174.86.167' // Your EC2 instance IPv4 address
-        APP_PATH = '/home/ubuntu/Aws-project' // Path to your application on EC2
-        VENV_PATH = '/home/ubuntu/Aws-project/venv' // Path to your virtual environment
+        APP_PATH = '/home/ubuntu/jenkins_workspace/Aws-project' // Updated path to your application on EC2
+        VENV_PATH = '/home/ubuntu/jenkins_workspace/venv' // Updated path to virtual environment
     }
 
     stages {
